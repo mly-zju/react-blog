@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 class Item_component extends React.Component{
   constructor(props){
@@ -13,7 +14,7 @@ class Item_component extends React.Component{
     const {title, publishTime, excerpt, id}=this.props;
     return (
       <li data-index={id} style={style}>
-        <h3>{title}</h3>
+        <h3><Link to={"/read/"+id}>{title}</Link></h3>
         <h4>{publishTime}</h4>
         <p>{excerpt}...</p>
       </li>

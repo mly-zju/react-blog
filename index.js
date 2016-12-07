@@ -6,6 +6,7 @@ import combine_reducer from './reducers'
 import Itemlist from './containers/itemlist.js'
 import Editor from './containers/editor.js'
 import Manage from './containers/managelist.js'
+import Read from './containers/read.js'
 import App from './containers'
 import {Router, Route, hashHistory, IndexRoute} from 'react-router'
 import {add_action} from './actions'
@@ -24,6 +25,7 @@ render(
           }
         }}/>
         <Route path="/manage" component={Manage}/>
+        <Route path="/read/:id" component={Read}/>
       </Route>
       <Route path="/create" component={Editor}/>
       <Route path="/edit/:id" component={Editor}/>
